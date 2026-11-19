@@ -1,1 +1,547 @@
-<h1> Ashish Kumar<h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVI Technology | Smart IT Solutions</title>
+<meta name="description" content="AVI Technology provides innovative IT solutions, website development, software, digital marketing and technology services.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #08111f;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(8,17,31,.96);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1d304b;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #00c8ff;
+}
+
+.logo span {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #00c8ff;
+}
+
+.hero {
+    min-height: 590px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 80% 40%, #12436b, #08111f 65%);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag {
+    color: #00c8ff;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: #00c8ff;
+}
+
+.hero p {
+    color: #bdc9d9;
+    max-width: 600px;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00bfff;
+    color: #061321;
+    padding: 14px 27px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 28px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 85px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 span {
+    color: #00c8ff;
+}
+
+.section-title p {
+    color: #9eafc4;
+}
+
+.services {
+    background: #0c192a;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    background: #12243a;
+    padding: 30px;
+    border: 1px solid #203b57;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #00c8ff;
+}
+
+.service-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #00c8ff;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #b5c2d2;
+    font-size: 14px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-box {
+    background: linear-gradient(135deg, #103c5e, #102036);
+    padding: 55px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #245375;
+}
+
+.about-box h2 {
+    font-size: 55px;
+    color: #00c8ff;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about h2 span {
+    color: #00c8ff;
+}
+
+.about p {
+    color: #b5c2d2;
+    margin-bottom: 15px;
+}
+
+.why {
+    background: #0c192a;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.why-item {
+    padding: 25px;
+}
+
+.why-item h3 {
+    color: #00c8ff;
+    margin: 12px 0;
+}
+
+.why-item p {
+    color: #aebdd0;
+    font-size: 14px;
+}
+
+.contact {
+    background: radial-gradient(circle at top right, #123d5c, #08111f 60%);
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-container p {
+    color: #bdc9d9;
+}
+
+form {
+    margin-top: 30px;
+    display: grid;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #29415b;
+    background: #12243a;
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #00bfff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    background: #050b14;
+    padding: 30px 8%;
+    text-align: center;
+    color: #9aabc0;
+}
+
+footer strong {
+    color: #00c8ff;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px #0008;
+    z-index: 100;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 80px 7%;
+        min-height: 500px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AVI <span>TECHNOLOGY</span></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="tag">WELCOME TO AVI TECHNOLOGY</div>
+        <h1>Smart Technology.<br>
+        <span>Better Future.</span></h1>
+        <p>
+            We provide innovative technology solutions to help businesses
+            grow faster, work smarter and succeed in the digital world.
+            Your vision, our technology!
+        </p>
+        <a href="#services" class="btn">Explore Our Services →</a>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="section-title">
+        <h2>Our <span>Services</span></h2>
+        <p>Complete technology solutions under one roof.</p>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Website Development</h3>
+            <p>Professional, responsive and modern websites
+            for businesses, startups and individuals.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>App Development</h3>
+            <p>Powerful and user-friendly mobile application
+            solutions for your business.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Graphic Designing</h3>
+            <p>Creative logos, banners, business cards,
+            branding and social media designs.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Digital Marketing</h3>
+            <p>Grow your online presence through SEO,
+            social media and digital advertising.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🖥️</div>
+            <h3>Software Solutions</h3>
+            <p>Custom business software, automation
+            and smart management systems.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>IT Support & Services</h3>
+            <p>Reliable technical support, computer
+            solutions and IT maintenance.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">☁️</div>
+            <h3>Cloud Solutions</h3>
+            <p>Cloud hosting, data management and
+            scalable digital infrastructure.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔐</div>
+            <h3>Cybersecurity</h3>
+            <p>Security consulting and practical
+            solutions to help protect your business.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-box">
+        <h2>AVI</h2>
+        <h3>TECHNOLOGY</h3>
+        <p>Innovation • Quality • Trust</p>
+    </div>
+
+    <div>
+        <h2>About <span>AVI Technology</span></h2>
+        <p>
+            AVI Technology is focused on delivering modern,
+            reliable and innovative digital solutions.
+            We help businesses transform their ideas into
+            powerful technology experiences.
+        </p>
+        <p>
+            Our goal is to provide quality services,
+            creative solutions and dependable customer support
+            to help every client move forward.
+        </p>
+        <a href="#contact" class="btn">Let's Work Together</a>
+    </div>
+</section>
+
+<section class="why" id="why">
+    <div class="section-title">
+        <h2>Why Choose <span>Us?</span></h2>
+        <p>Technology and service you can trust.</p>
+    </div>
+
+    <div class="why-grid">
+        <div class="why-item">
+            <div class="service-icon">⭐</div>
+            <h3>Quality Work</h3>
+            <p>We focus on delivering professional solutions.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="service-icon">⚡</div>
+            <h3>Fast Delivery</h3>
+            <p>Efficient project execution and timely delivery.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="service-icon">🤝</div>
+            <h3>Customer Support</h3>
+            <p>Friendly assistance and reliable communication.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="service-icon">💡</div>
+            <h3>Innovative Ideas</h3>
+            <p>Creative technology for modern challenges.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="section-title">
+            <h2>Contact <span>Us</span></h2>
+            <p>Have a project in mind? Let's discuss your ideas.</p>
+        </div>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number">
+            <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+            <button type="submit">Send Your Message →</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 <strong>AVI Technology</strong>. All Rights Reserved.</p>
+    <p>Smart Technology. Better Future.</p>
+</footer>
+
+<!-- Replace the number below with your WhatsApp number -->
+<a class="whatsapp"
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank" rel="noopener noreferrer">
+    WhatsApp Us
+</a>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Replace with your actual WhatsApp number
+    const whatsappNumber = "91XXXXXXXXXX";
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const text = `Hello AVI Technology!
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Message: ${message}`;
+
+    if (whatsappNumber.includes("X")) {
+        alert("Please configure your WhatsApp number in the website code.");
+        return;
+    }
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text),
+        "_blank"
+    );
+});
+</script>
+
+</body>
+</html>
